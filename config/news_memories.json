@@ -1,0 +1,182 @@
+[
+  {
+    "id": "m-news-ai-be7bc839",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Kobo plans to use AI for Writing Life, its self-publishing platform. They aim to eliminate the human element from moderation.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "goodereaderblog",
+    "author": "news_bot",
+    "created_at": "2025-06-29",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-6fe3cc5c",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Unveiling the Best Programming Languages for Artificial Intelligence in 2025. So, you\u2019re wondering what the deal is with programming languages for artificial intelligence, especially as we head into...",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "techannouncer",
+    "author": "news_bot",
+    "created_at": "2025-06-29",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-862da5bd",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Mobile gaming is evolving into a more responsive and context-aware. Artificial intelligence (AI) and augmented reality (AR) are becoming part of how games are built, how players interact with them, and how studios make decisions.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "abplive",
+    "author": "news_bot",
+    "created_at": "2025-06-29",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-dc2bb4c9",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "OpenAI recently began renting Google\u2019s artificial intelligence (AI) chips to power ChatGPT and its other products, a source close to the company says.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "businesstimes",
+    "author": "news_bot",
+    "created_at": "2025-06-29",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-23e4c376",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Meta Platforms is hiring four more OpenAI artificial intelligence researchers. The Information reported on Saturday that Meta Platforms will hire four more researchers.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "thestar_my",
+    "author": "news_bot",
+    "created_at": "2025-06-28",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-bca53544",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "China still lags behind the US in artificial intelligence (AI) chips. But the country is rapidly catching up in algorithms, says computer scientist.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "scmp",
+    "author": "news_bot",
+    "created_at": "2025-06-28",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-7a3836b2",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Chinese AI startup DeepSeek said in January it had developed an AI model to rival ChatGPT at mu...",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "malaymail",
+    "author": "news_bot",
+    "created_at": "2025-06-28",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-433f766c",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": " humanoid robots beat humans 5-3 at an industrial zone in Beijing. The game was a breakthrough for humanoid robots and the artificial intelligence that powered them.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "livemint",
+    "author": "news_bot",
+    "created_at": "2025-06-28",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-91791852",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Apple may be planning an evolutionary update to the iPhone, but those looking for a new Mac are waiting for details on the next MacBook Pro.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "forbes",
+    "author": "news_bot",
+    "created_at": "2025-06-28",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-e0331bc9",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Analysts Tip Ruvi AI (RUVI) Instead Of Dogecoin (DOGE) For Over 13,700% ROI.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "analyticsinsight",
+    "author": "news_bot",
+    "created_at": "2025-06-28",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  }
+]

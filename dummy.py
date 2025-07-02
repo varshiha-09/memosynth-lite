@@ -1,10 +1,13 @@
 from qdrant_client import QdrantClient
 
 client = QdrantClient("http://localhost:6333")
-client.delete_collection(collection_name="memos")
-print(" Qdrant collection cleared.")
 
-results, _ = client.scroll(collection_name="memos", limit=5)
-for r in results:
-    print(r.payload)
+collections = client.get_collections()
+print("Collections in Qdrant:")
+for col in collections.collections:
+    print("-", col.name)
 
+collection_name = "memos"  
+info = client.get_collection(collection_name=collection_name)
+
+print(f"Collection '{collection_name}' has {info.points_count} points.")

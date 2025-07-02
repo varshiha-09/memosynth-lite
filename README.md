@@ -69,6 +69,35 @@ ORDER BY timestamp
 df = con.execute(query).fetchdf()
 print(df)
 ```
+
+### 8. Automatic News Memory Ingestion with Topic Segregation
+
+MemoSynth-Lite includes a `news_to_memory.py` script that fetches live news articles using the NewsData API. This script performs the following:
+
+- **Retrieves articles** related to a specific topic (e.g., `"AI"`).
+- **Summarizes each article** using transformer models (`facebook/bart-large-cnn` or `t5-small` depending on resource availability).
+- **Assigns a `topic` field** to each memory, allowing clean separation in the vector space.
+- **Checks for duplicates** and only stores **new memories** based on unique memory `id`s.
+
+Once validated, each memory is pushed into all three memory systems:
+
+- **Qdrant** (vector memory store for semantic search)
+- **DuckDB** (timeline memory log for chronological tracking)
+- **Neo4j** (graph memory store for relationship mapping)
+
+This modular ingestion pipeline ensures that:
+
+- Topic-specific memories do not contaminate each other's vector space.
+- Querying can be both topic-scoped or global depending on the use case.
+- All data remains traceable and auditable over time.
+
+You can trigger this pipeline by running:
+
+```bash
+python scripts/news_to_memory.py
+pyhton scripts/run_demo1.py
+```
+
 ### Architecture Diagram
 
 ![Architecture Diagram](docs/project.png)

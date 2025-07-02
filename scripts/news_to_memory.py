@@ -122,13 +122,13 @@ def import_to_qdrant_and_graph(memory_list):
         try:
             memory = Memory(**data)
             if memory_exists_in_qdrant(memory.id):
-                print(f"⏩ Skipping existing memory in Qdrant: {memory.id}")
+                print(f" Skipping existing memory in Qdrant: {memory.id}")
                 continue
             write_memory(memory)
             create_memory_node(memory)
             added += 1
         except Exception as e:
-            print(f"⚠️ Skipped memory ID {data.get('id', 'unknown')}: {e}")
+            print(f" Skipped memory ID {data.get('id', 'unknown')}: {e}")
     print(f"Imported {added} memories to Qdrant and Neo4j")
 
 

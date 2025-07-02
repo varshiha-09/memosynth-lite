@@ -10,10 +10,13 @@ client = QdrantClient("http://localhost:6333")
 
 model = SentenceTransformer("all-mpnet-base-v2")
 
-client.recreate_collection(
-    collection_name="memos",
-    vectors_config=VectorParams(size=768, distance=Distance.COSINE)
-)
+try:
+    client.get_collection("memos")
+except Exception:
+    client.create_collection(
+        collection_name="memos",
+        vectors_config=VectorParams(size=768, distance=Distance.COSINE)
+    )
 
 
 def write_memory(memory: Memory):

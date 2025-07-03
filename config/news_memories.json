@@ -178,5 +178,113 @@
     "visibility": "project",
     "sensitivity": "low",
     "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-0aa94b8a",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "The cuts will affect multiple teams around the world, including its sales division and its Xbox video game business.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "thehindu",
+    "author": "news_bot",
+    "created_at": "2025-07-02",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-a4a28ef3",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "The cuts will affect multiple teams around the world, including its sales division and its Xbox video game business.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "thehindu",
+    "author": "news_bot",
+    "created_at": "2025-07-02",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-a82c631e",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "The data center will be moved to a new structure on the southwest end of campus. The new structure will accommodate more research space and a new AI institute.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "govtech",
+    "author": "news_bot",
+    "created_at": "2025-07-02",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-ffe20d13",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Anthropic has reportedly hit a $4 billion annualized revenue run rate, just months after being pegged at around $1 billion in late 2024. Driven by enterprise demand and token-based API usage, Claude has gone from up-and-comer to high earner in",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "benzinga",
+    "author": "news_bot",
+    "created_at": "2025-07-02",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-4f4ee19d",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Microsoft says it is slashing a little less than four percent of its global workforce. The company says it wants to cut layers of middle management and leverage new technologies.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "newshd24",
+    "author": "news_bot",
+    "created_at": "2025-07-02",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-b4bc9099",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "New biological models are changing the game. Scientists are using them to understand the human body in new ways. The results are expected in the next few years.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "forbes",
+    "author": "news_bot",
+    "created_at": "2025-07-02",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
   }
 ]

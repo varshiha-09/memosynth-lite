@@ -10,13 +10,13 @@ client = QdrantClient("http://localhost:6333")
 
 model = SentenceTransformer("all-mpnet-base-v2")
 
-try:
-    client.get_collection("memos")
-except Exception:
+existing_collections = [col.name for col in client.get_collections().collections]
+if "memos" not in existing_collections:
     client.create_collection(
         collection_name="memos",
         vectors_config=VectorParams(size=768, distance=Distance.COSINE)
     )
+
 
 
 def write_memory(memory: Memory):
@@ -31,15 +31,13 @@ def write_memory(memory: Memory):
     print("Memory written to Qdrant and timeline.")
 
 
-def query_memory(prompt: str, top_k: int = 3, topic: str = None):
+def query_memory(prompt: str, top_k: int = 5, topic: str = None, min_score: float = 0.3):
     vector = model.encode(prompt).tolist()
 
     query_filter = None
     if topic:
         query_filter = Filter(
-            must=[
-                FieldCondition(key="topic", match=MatchValue(value=topic))
-            ]
+            must=[FieldCondition(key="topic", match=MatchValue(value=topic))]
         )
 
     results = client.search(
@@ -48,7 +46,17 @@ def query_memory(prompt: str, top_k: int = 3, topic: str = None):
         limit=top_k,
         query_filter=query_filter
     )
-    return [r.payload for r in results]
+
+    print("\n🔍 Raw results from Qdrant:")
+    for res in results:
+        print(f"Score: {res.score:.4f} | Summary: {res.payload.get('summary')}")
+
+    # Optional: filter by minimum score (but print warning if everything was dropped)
+    filtered = [r.payload for r in results if r.score and r.score >= min_score]
+    if not filtered:
+        print("⚠️ All results were below the min_score threshold.")
+
+    return filtered
 
 def memory_exists_in_qdrant(memory_id: str) -> bool:
     try:

@@ -35,8 +35,9 @@ for mem_data in all_memories:
         if not memory_exists_in_qdrant(memory.id):
             write_memory(memory)
             create_memory_node(memory)
+      
         else:
-            print(f"⏩ Skipping existing memory: {memory.id}")
+            print(f" Skipping existing memory: {memory.id}")
     except Exception as e:
         print(f"Skipped {mem_data.get('id', 'unknown')}: {e}")
 

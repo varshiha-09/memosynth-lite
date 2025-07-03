@@ -21,9 +21,13 @@ def summarize_memories(memories):
 def real_llm_call(prompt: str) -> str:
     chat = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}]
+        messages=[
+            {"role": "system", "content": "Only answer using the memory content provided. Do not invent details."},
+            {"role": "user", "content": prompt}
+        ]
     )
     return chat.choices[0].message.content
+
 
 def diff(mem1, mem2):
     if mem1.summary != mem2.summary:

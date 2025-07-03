@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "neovis.js": "^2.1.0",
+    "react-force-graph": "^1.47.7"
+  }
+}

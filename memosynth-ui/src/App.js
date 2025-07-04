@@ -54,8 +54,8 @@ function App() {
       padding: '1rem'
     }}>
       <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
-        <button onClick={() => setTab('chat')} style={tabStyle(tab === 'chat')}>💬 Chat with Memory</button>
-        <button onClick={() => setTab('upload')} style={tabStyle(tab === 'upload')}>🧠 What should I remember?</button>
+        <button onClick={() => setTab('chat')} style={tabStyle(tab === 'chat')}>Chat with Memory</button>
+        <button onClick={() => setTab('upload')} style={tabStyle(tab === 'upload')}>What should I remember?</button>
       </div>
 
       {tab === 'chat' && (
@@ -68,9 +68,9 @@ function App() {
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Ask something..."
           />
-          <button onClick={handleSend} style={buttonStyle}>🚀 Send</button>
+          <button onClick={handleSend} style={buttonStyle}>Send</button>
 
-          {loading && <div style={thinkingStyle}>🤖 Thinking...</div>}
+          {loading && <div style={thinkingStyle}>Thinking...</div>}
 
           {!loading && response && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} style={responseStyle}>

@@ -16,9 +16,6 @@ if "memos" not in existing_collections:
         collection_name="memos",
         vectors_config=VectorParams(size=768, distance=Distance.COSINE)
     )
-
-
-
 def write_memory(memory: Memory):
     vector = model.encode(memory.summary).tolist()
     point = PointStruct(
@@ -29,7 +26,6 @@ def write_memory(memory: Memory):
     client.upsert(collection_name="memos", points=[point])
     log_memory(memory)  
     print("Memory written to Qdrant and timeline.")
-
 
 def query_memory(prompt: str, top_k: int = 5, topic: str = None, min_score: float = 0.3):
     vector = model.encode(prompt).tolist()
@@ -46,16 +42,12 @@ def query_memory(prompt: str, top_k: int = 5, topic: str = None, min_score: floa
         limit=top_k,
         query_filter=query_filter
     )
-
-    print("\n🔍 Raw results from Qdrant:")
+    print("\n Raw results from Qdrant:")
     for res in results:
         print(f"Score: {res.score:.4f} | Summary: {res.payload.get('summary')}")
-
-    # Optional: filter by minimum score (but print warning if everything was dropped)
     filtered = [r.payload for r in results if r.score and r.score >= min_score]
     if not filtered:
-        print("⚠️ All results were below the min_score threshold.")
-
+        print("All results were below the min_score threshold.")
     return filtered
 
 def memory_exists_in_qdrant(memory_id: str) -> bool:

@@ -3,20 +3,21 @@ from memosynth.memory_schema import Memory
 
 driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "test1234"))
 
-#create a node in neo4j
 def create_memory_node(memory: Memory):
     with driver.session() as session:
         session.run(
-    """
-    MERGE (m:Memory {id: $id})
-    SET m.summary = $summary
-    """,
-    {
-        "id": memory.id,
-        "summary": memory.summary
-    }
-)
-    print(f"Memory node '{memory.id}' created in graph.")
+            """
+            MERGE (m:Memory {id: $id})
+            SET m.summary = $summary,
+                m.topic = $topic
+            """,
+            {
+                "id": memory.id,
+                "summary": memory.summary,
+                "topic": memory.topic
+            }
+        )
+    print(f"Memory node '{memory.id}' with topic '{memory.topic}' created in graph.")
 
 def create_relationships():
     with driver.session() as session:
@@ -27,4 +28,11 @@ def create_relationships():
         """)
     print("Relationships created for shared topics.")
 
-
+def get_memory_links(memory_ids: list[str]):
+    with driver.session() as session:
+        result = session.run("""
+            MATCH (a:Memory)-[r]->(b:Memory)
+            WHERE a.id IN $ids
+            RETURN a.id AS source, b.id AS target, type(r) AS relation
+        """, {"ids": memory_ids})
+        return [dict(record) for record in result]

@@ -78,8 +78,8 @@ timeline_text = ""
 for _, row in df.iterrows():
     timeline_text += f"- ({row['timestamp']}) {row['summary']}\n"
 
-prompt = f"Summarize the following Q2-related events over time:\n{timeline_text}"
+prompt = f"\n Summarize the following Q2-related events over time:\n{timeline_text}"
 summary = real_llm_call(prompt)
 
-print("Timeline Summary:")
+print("\n Timeline Summary:\n")
 print(summary)

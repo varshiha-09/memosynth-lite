@@ -10,7 +10,7 @@ MemoSynth-Lite is a project that builds a lightweight memory system for Large La
 - Track relationships between memories in a graph database (Neo4j).
 - Build basic APIs to store, query, summarize, compare, and resolve memory data.
 - Use transformer-based summarization models (BART, T5) and semantic search (MPNet).
-
+- Build an interactive frontend for memory exploration.
 ## Key Features
 
 ### 1. Memory Storage
@@ -98,6 +98,9 @@ python scripts/news_to_memory.py
 pyhton scripts/run_demo1.py
 ```
 
+### 9. Frontend
+I’ve built a simple web interface that allows users to both query existing memories and ingest new ones without touching the backend. The search bar lets users enter a question or prompt. It uses semantic search powered by Qdrant to find the most relevant memories based on meaning, not just keywords.
+
 ### Architecture Diagram
 
 ![Architecture Diagram](docs/project.png)
@@ -108,6 +111,8 @@ pyhton scripts/run_demo1.py
 2. Add your `OPENAI_API_KEY` and `NEWSDATA_API_KEY` in a `.env` file.
 3. Start Qdrant and Neo4j using Docker.
 4. Run `scripts/run_demo.py` to simulate end-to-end flow.
+5. uvicorn app.main:app --reload
+6. npm start
 
 
 ## Dependencies

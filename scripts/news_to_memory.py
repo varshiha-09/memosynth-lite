@@ -1,7 +1,8 @@
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-import os
 import json
 import requests
 import hashlib

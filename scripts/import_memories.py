@@ -6,10 +6,8 @@ from memosynth.vector_store import write_memory, client
 from memosynth.graph_store import create_memory_node
 from qdrant_client.models import Filter, FieldCondition, MatchValue
 
-# Add project root to sys.path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-# Scan config/ for .json files
 config_dir = Path("config")
 json_files = list(config_dir.glob("*.json"))
 print(f"Found {len(json_files)} memory files.")
@@ -32,8 +30,6 @@ for file in json_files:
     try:
         with open(file) as f:
             data = json.load(f)
-
-        # Support both a list of memories and a single memory object
         memories = data if isinstance(data, list) else [data]
 
         for mem_data in memories:
@@ -41,17 +37,17 @@ for file in json_files:
                 memory = Memory(**mem_data)
 
                 if memory_exists_in_qdrant(memory.id):
-                    print(f"⏭️  Skipping duplicate memory ID: {memory.id}")
+                    print(f"⏭Skipping duplicate memory ID: {memory.id}")
                     continue
 
                 write_memory(memory)
                 create_memory_node(memory)
-                print(f"✅ Imported memory: {memory.id}")
+                print(f"Imported memory: {memory.id}")
 
             except Exception as e:
-                print(f"❌ Failed to load memory in {file.name}: {e}")
+                print(f"Failed to load memory in {file.name}: {e}")
 
     except Exception as e:
-        print(f"❌ Skipped {file.name}: {e}")
+        print(f"Skipped {file.name}: {e}")
 
-print("✅ Done importing all unique memories.")
+print(" Done importing all unique memories.")

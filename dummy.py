@@ -12,5 +12,6 @@ info = client.get_collection(collection_name=collection_name)
 
 print(f"Collection '{collection_name}' has {info.points_count} points.")
 result, _ = client.scroll(collection_name="memos", limit=5)
-for r in result:
-    print(r.payload.get("summary", ""), getattr(r, "score", "No Score"))
+info = client.get_collection("memos")
+print(info)
+

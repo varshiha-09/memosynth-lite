@@ -27,7 +27,7 @@ def write_memory(memory: Memory):
     log_memory(memory)  
     print("Memory written to Qdrant and timeline.")
 
-def query_memory(prompt: str, top_k: int = 5, topic: str = None, min_score: float = 0.3):
+def query_memory(prompt: str, top_k: int = 5, topic: str = None, min_score: float = 0.2):
     vector = model.encode(prompt).tolist()
 
     query_filter = None
@@ -42,7 +42,7 @@ def query_memory(prompt: str, top_k: int = 5, topic: str = None, min_score: floa
         limit=top_k,
         query_filter=query_filter
     )
-    print("\n Raw results from Qdrant:")
+
     for res in results:
         print(f"Score: {res.score:.4f} | Summary: {res.payload.get('summary')}")
     filtered = [r.payload for r in results if r.score and r.score >= min_score]

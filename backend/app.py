@@ -48,19 +48,6 @@ def chat_with_memory(query: ChatQuery):
         "relevant_memories": results
     }
 
-@app.get("/graph")
-def get_graph():
-    with driver.session() as session:
-        result = session.run("""
-            MATCH (a:Memory)-[r:RELATED_TO]->(b:Memory)
-            RETURN a.id AS source, b.id AS target
-        """)
-        edges = [{"source": record["source"], "target": record["target"]} for record in result]
-        
-        result = session.run("MATCH (m:Memory) RETURN m.id AS id, m.summary AS summary")
-        nodes = [{"id": record["id"], "label": record["summary"][:40]} for record in result]
-
-    return JSONResponse(content={"nodes": nodes, "links": edges})
 
 @app.post("/add_memories")
 async def add_manual_memories(data: dict):

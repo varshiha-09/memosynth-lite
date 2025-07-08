@@ -286,5 +286,149 @@
     "visibility": "project",
     "sensitivity": "low",
     "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-da3eab19",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Businesses are still new at this. Here are some things to know about how to go about AI integration the right way.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "forbes",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-958d22a6",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Most firms are still trying out AI agents, hailed by Big Tech as game changers. Analysts warn that many of these may be scrapped within two years.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "livemint",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-57f491a2",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "OpenAI's \"Study together\" mode has been spotted in the wild. It could help students prepare for exams directly from ChatGPT.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "bleepingcomputer",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-af031954",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Businesses around the world are expected to pay $244.22 billion for AI services. You can see clear changes across industries as companies turn to AI to reduce disruptions.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "zephyrnet",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-e56a047e",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Cybercriminals are employing artificial intelligence to steal identities by infiltrating and examining victim networks and employing automated phishing attempts.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "forbes",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-968b7fdc",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Demonstrators gathered inside and outside of New York City's 5th Avenue Apple store on Sunday. Police officers were called and quickly ejected the protesters.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "benzinga",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-185dd264",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "The most important parts of learning cannot be replaced by a machine. Implementing new technology is messy.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "livemint",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
+  },
+  {
+    "id": "m-news-ai-700b54bf",
+    "project": "news_tracker",
+    "agent": "news_bot",
+    "summary": "Explore the controversial labor practices within AI development under Sam Altman's leadership and its far-reaching implications.",
+    "type": "insight",
+    "tags": [
+      "AI"
+    ],
+    "source": "internetprotocol",
+    "author": "news_bot",
+    "created_at": "2025-07-06",
+    "version": 1,
+    "confidence": 0.9,
+    "visibility": "project",
+    "sensitivity": "low",
+    "topic": "AI"
   }
 ]
